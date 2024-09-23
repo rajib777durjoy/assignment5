@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- daisy Ui link -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.tailwindcss.com"></script>
+     <!-- google font family link -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <title>Assignment-5</title>
+    <style>
+        .bg_header_color{
+           background-color: #F9F7F3;
+        }
+        .btn_color{
+            background-color:#B4F461 ;
+        }
+
+        .lexend-font {
+        font-family:"Lexend",sans-serif;
+  
+        }
+    </style>
+</head>
+<body class="lexend-font">
+    <!-- header part here -->
+    <header id="header-part" class="max-w-[100%] h-[100px] border-2 bg_header_color sticky top-0 ">
+       <nav class=" h-[70px] w-[90%] mx-auto  flex justify-between items-center text-black">
+          <button id="blogBtn" class="btn_color rounded-lg w-[100px] h-[35px] text-black font-semibold mx-2">Blog</button>
+           <div class="flex items-center md:gap-2 ">
+            <img src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/logo.png" alt=""> <a href="#" class="font-semibold text-xl">Donet Bangladesh</a>
+           </div>
+           <div class="flex items-center gap-1">
+             <img src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="">
+              <h2 id="myBalance">5000</h2>
+               <span>BDT</span>
+           </div>
+       </nav>
+    </header>
+       <!------------------------------------------------------------------------------------------->
+    <main class="max-w-[100%] mt-[5%]">
+        <!-- banner section here -->
+        <div class="banner w-[90%] mx-auto flex justify-center my-4 gap-[30px]">
+            <button id="donation-btn" class="w-[150px] h-[50px] btn_color border rounded-md font-semibold text-xl">Donation</button>
+            <button id="history-btn" class="w-[150px] h-[50px] border rounded-md font-semibold text-xl">History</button>
+        </div>
+
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="my_modal_1" class="modal text-center">
+          <div class="modal-box">
+            <h3 class="text-3xl font-extrabold">Congrates!</h3>
+            <p class="py-4 w-[100%]"><img src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="" class="w-[30px] mx-auto"></p>
+            <p class="py-2 text-xl font-light">You Have Donated for Humankind</p>
+            <h1 class="text-2xl font-extrabold">Successfully</h1>
+            <div class="modal-action w-[100%]">
+              <form method="dialog" class="mx-auto">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn w-[250px] mx-auto text-xl font-semibold">close confirmation</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+      <!-- Open the modal using ID.showModal() method -->
+
+        <div id="card-perent-section" >
+        <!-- card section start here -->
+        <div class=" md:flex justify-evenly border-2 w-[90%] min-h-[440px] mx-auto my-4 rounded-lg">
+    
+        <div id="card-item" class="md:w-[45%] h-[350px]  my-auto ">
+            <img src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/noakhali.png" alt="" class="w-[100%] h-full rounded-lg">
+        </div>
+        <div class="md:w-[45%] min-h-[350px]  md:my-auto my-4 ">
+            <h1 class="flex my-2 w-[120px]  bg_header_color "><img src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="" class="ms-2"><span id="card-amount" class="">00</span>BDT</h1>
+            <h3 id="headingTag1" class="font-bold text-xl my-2">Donate for Flood at Nookhali,Bangladesh</h3>
+            <p class="text-[16px] font-light"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+
+            <!-- input-part here -->
+            <input id="inputValue" type="number" placeholder="Write Donation Amount" class="w-[100%] border-2 rounded-lg h-[50px] mt-6 px-4">
+             <!-- alert-message -->
+            <h2 id="alert-message" class="text-red-500 hidden ">Nagative value is not accepted</h2>
+            <!-- submit button here -->
+            <button id="donate-submit1" class="w-[100%] h-[50px] btn_color text-xl font-semibold rounded-lg mt-4">Donate Now</button>
+        </div>
+
+      </div> 
+        <div class="md:flex justify-evenly border-2 w-[90%] min-h-[440px] mx-auto  my-4 rounded-lg">
+     
+        <div id="card-item" class="md:w-[45%] min-h-[350px]  my-auto ">
+            <img src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/feni.png" alt="" class="w-[100%] h-full rounded-lg">
+        </div>
+        <div class="md:w-[45%] min-h-[350px]  md:my-auto my-4 border-2">
+            <h1 class="flex my-2 w-[120px]  bg_header_color "><img src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="" class="ms-2"><span id="card-amount2" class="">00</span>BDT</h1>
+            <h3 id="headingTag2" class="font-bold text-xl ">Donate for Flood Relief in Feni,Bangladesh</h3>
+            <p class="text-[16px] font-light"> The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference.</p>
+            <!-- input-part here -->
+            <input id="inputValue2" type="text" placeholder="Write Donation Amount" class="w-[100%] border-2 rounded-lg h-[50px] my-3 px-4">
+            <!-- alert-message2 -->
+            <h2 id="alert-message2" class="text-red-500 hidden ">Nagative value is not accepted</h2>
+               <!-- submit button here -->
+            <button id="donate-submit2" class="w-[100%] h-[50px] btn_color text-xl font-semibold rounded-lg ">Donate Now</button>
+        </div>
+
+      </div>
+        <!----------------------------------------------> 
+        <div class="md:flex justify-evenly border-2 w-[90%] min-h-[440px] mx-auto  my-4 rounded-lg">
+    
+        <div id="card-item" class="md:w-[45%] h-[350px] my-auto ">
+            <img src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/quota-protest.png" alt="" class="w-[100%] h-full rounded-lg">
+        </div>
+        <div class="md:w-[45%] min-h-[350px]  md:my-auto my-4">
+            <h1 class="flex my-2 w-[120px]  bg_header_color "><img src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="" class="ms-2"><span id="card-amount3" class="">00</span>BDT</h1>
+            <h3 id="headingTag3" class="font-bold text-xl my-2">Aid for Injured in the Quota Movement</h3>
+            <p class="text-[16px] font-light"> The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery.</p>
+            <!-- input-part here -->
+            <input id="inputValue3" type="text" placeholder="Write Donation Amount" class="w-[100%] border-2 rounded-lg h-[50px]  px-4">
+            <!-- alert-message3 -->
+            <h2 id="alert-message3" class="text-red-500 hidden ">Nagative value is not accepted</h2>
+               <!-- submit button here -->
+            <button id="donate-submit3" class="w-[100%] h-[50px] btn_color text-xl font-semibold rounded-lg mt-2">Donate Now</button>
+        </div>
+
+      </div> 
+    </div>
+        <!-- card section end here -->
+        <!------------------------------------------------------------------------------------------->
+         <!-- history section start here -->
+           <div id="history-section" class=" hidden w-[90%] mx-auto min-h-[400px]  my-2">
+             <div id="history-list">
+
+             </div>
+           </div>
+         <!-- history section end here -->
+    </main>
+<script src="./app.js"></script>
+</body>
+</html>

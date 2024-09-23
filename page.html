@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- daisy ui link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font family link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <title>Challenging Page</title>
+    <style>
+         .bg_header_color{
+           background-color: #F9F7F3;
+        }
+        .btn_color{
+            background-color:#B4F461 ;
+        }
+        .lexend-font {
+         font-family:"Lexend",sans-serif;
+  
+        }
+    </style>
+</head>
+<body class="lexend-font">
+    <header id="header-part" class="max-w-[100%] h-[100px] border-2 bg_header_color sticky top-0 ">
+        <nav class=" h-[70px] w-[90%] mx-auto  flex justify-between items-center text-black">
+           <button id="homeBtn" class="btn_color rounded-lg w-[100px] h-[35px] text-black font-semibold mx-2">Home</button>
+            <div class="flex items-center md:gap-2 ">
+             <img src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/logo.png" alt=""> <a href="#" class="font-semibold text-xl">Donet Bangladesh</a>
+            </div>
+            <div class="flex items-center gap-1">
+              <img src="./B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="">
+               <h2 id="myBalance">5000</h2>
+                <span>BDT</span>
+            </div>
+        </nav>
+     </header>
+     <main class="max-w-[100%] my-6">
+         <div class="w-[90%] mx-auto my-2">
+            <h1 class="text-4xl font-extrabold my-4 py-4">Important FAQ</h1>
+            <div class="w-[100%]">
+                <div class="collapse collapse-arrow bg-base-200 my-4">
+                    <input type="radio" name="my-accordion-2" checked="checked" />
+                    <div class="collapse-title text-xl font-medium ">What in the Document Object Model (DOM)?</div>
+                    <div class="collapse-content">
+                      <p>DOM full form is Document Object Model.If we use DOM to make a web site of web page interactive like click event etc.</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow bg-base-200 mb-4">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-xl font-medium">How do you select on element from the DOM?</div>
+                    <div class="collapse-content">
+                      <p>document.getElementbyId()</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow bg-base-200 mb-4">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-xl font-medium">What in event delegation in the context of the DOM, and why is it useful?</div>
+                    <div class="collapse-content">
+                      <p>Event delegation refers to the process of using event propagation (bubbling) to handle events at a higher level in the DOM than the element on which the event originated. It allows us to attach a single event listener for elements that exist now or in the future.</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow bg-base-200 mb-4">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                    <div class="collapse-content">
+                      <p>If you want to change other attributes like id , href , or src , you can use the setAttribute() method. The setAttribute() method accepts two arguments: The name of the attribute to set. The value of the attribute to set.</p>
+                    </div>
+                </div>
+            </div>
+         </div>
+     </main>
+     <script src="./home.js"></script>
+</body>
+</html>
