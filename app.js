@@ -27,7 +27,7 @@ submit_btn.addEventListener("click",function(){
 // balance minimise //
 // console.log(currentBalance)
 
-if(getInputValue("inputValue")<0 || getInputValue("inputValue")===NaN){
+if(getInputValue("inputValue")<0){
     document.getElementById("alert-message").classList.remove("hidden")
 }
 else{
@@ -65,7 +65,7 @@ else{
 
 let submit_btn2=getEvent("donate-submit2");
 submit_btn2.addEventListener("click",function(){
-    if(getInputValue("inputValue2")<0 ||getInputValue("inputValue2")===NaN){
+    if(getInputValue("inputValue2")<0){
         document.getElementById("alert-message2").classList.remove("hidden")
     }
 // value added function//
@@ -101,7 +101,7 @@ history_list.insertBefore(history_box,history_list.firstChild);
 
 let submit_btn3=getEvent("donate-submit3");
 submit_btn3.addEventListener("click",function(){
-    if(getInputValue("inputValue3")<0 || getInputValue("inputValue3")===NaN){
+    if(getInputValue("inputValue3")<0){
         document.getElementById("alert-message3").classList.remove("hidden")
     }
 // value added function//
